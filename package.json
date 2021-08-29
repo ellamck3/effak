@@ -1,0 +1,24 @@
+{
+  "name": "effak-app",
+  "version": "1.0.0",
+  "description": "App for coffee",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Gustav Heide Iversen",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "express": "^4.17.1",
+    "react-time-picker": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
