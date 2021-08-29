@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import './coffee.css'
+import coffe_mug from '../images/full_coffee.jpg'
 
 function Coffee() {
     const [state, setState] = useState("Empty")
@@ -15,6 +16,7 @@ function Coffee() {
         <div >
             <h2>Coffee!</h2>
             <h2>{ state }</h2>
+            <img src={ coffe_mug }/>
         </div>
     );
 }
