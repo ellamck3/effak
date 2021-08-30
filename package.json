@@ -9,7 +9,9 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev-py": "concurrently \"python3 server.py\" \"npm run client\"",
+    "dev-online": "npm install && npm run client-install && npm run dev"
   },
   "author": "Gustav Heide Iversen",
   "license": "MIT",
