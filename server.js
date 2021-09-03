@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express()
 const port = 5000
 
+
 let coffee_state = "Empty"
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -16,7 +17,7 @@ app.post('/api/coffee', (req, res) => {
     console.log(`${req.body.state}`)
     console.log(`${req.body=='Brewing'}`)
   
-    if(req.body.state=='Brewing')
+    if(req.body.state == 'Brewing')
     {
       coffee_state = 'Brewing'
       setTimeout(() => {
@@ -24,12 +25,12 @@ app.post('/api/coffee', (req, res) => {
       },5000)
       res.json(`Success`)
     }
-    else if (req.body.state=='Full')
+    else if (req.body.state == 'Full')
     {
       coffee_state = 'Full'
       res.json(`Success`)
     }
-    else if (req.body.state=='Empty')
+    else if (req.body.state == 'Empty')
     {
       coffee_state = 'Empty'
       res.json(`Success`)
