@@ -19,7 +19,8 @@
   "dependencies": {
     "concurrently": "^6.2.1",
     "express": "^4.17.1",
-    "react-time-picker": "^4.4.1"
+    "react-time-picker": "^4.4.1",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"

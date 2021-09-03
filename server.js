@@ -13,16 +13,32 @@ app.get('/api/coffee', (req, res) => {
 })
 
 app.post('/api/coffee', (req, res) => {
-    console.log(req.body)
-    if (['Empty', 'Full', 'Brewing'].indexOf(req.body.state) >= 0) {
-        coffee_state = req.body.state
-        res.json("Success")
+    console.log(`${req.body.state}`)
+    console.log(`${req.body=='Brewing'}`)
+  
+    if(req.body.state=='Brewing')
+    {
+      coffee_state = 'Brewing'
+      setTimeout(() => {
+          coffee_state = 'Full'
+      },5000)
+      res.json(`Success`)
+    }
+    else if (req.body.state=='Full')
+    {
+      coffee_state = 'Full'
+      res.json(`Success`)
+    }
+    else if (req.body.state=='Empty')
+    {
+      coffee_state = 'Empty'
+      res.json(`Success`)
     }
     else
     {
-        res.json(`Invalid body. Got "${req.body.state}" must be one of: Full, Empty, Brewing`)
+      res.json(`Invalid body. Got "${req.body}" must be one of: Full, Empty, Brewing`)
     }
-})
+  })
 
 
 app.listen(port, () => console.log(`Server started on ${port}`))
