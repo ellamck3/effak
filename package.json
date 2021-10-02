@@ -10,13 +10,13 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "dev-py": "concurrently \"python3 server.py\" \"npm run client\"",
     "dev-online": "npm install && npm run client-install && npm run dev",
     "install-online": "npm install && npm run client-install"
   },
   "author": "Gustav Heide Iversen",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.22.0",
     "concurrently": "^6.2.1",
     "express": "^4.17.1",
     "react-time-picker": "^4.4.1",

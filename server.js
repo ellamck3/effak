@@ -14,8 +14,6 @@ app.get('/api/coffee', (req, res) => {
 })
 
 app.post('/api/coffee', (req, res) => {
-    console.log(`${req.body.state}`)
-    console.log(`${req.body=='Brewing'}`)
   
     if(req.body.state == 'Brewing')
     {
